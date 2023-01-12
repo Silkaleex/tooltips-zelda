@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap");
+* {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+}
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url(https://imgs.search.brave.com/5ZAQsqexgfF5Mi-cw6NsOq429pNzV5KSrg2C8asCRZE/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9hLXN0/YXRpYy5iZXN0aGR3/YWxscGFwZXIuY29t/L2xhLWxleWVuZGEt/ZGUtemVsZGEtbGEt/cmVzcGlyYWNpb24t/ZGUtbGEtc2VsdmEt/cGFyYS1lbC1jb25t/dXRhZG9yLWRlLW5p/bnRlbmRvLXBhcGVs/LXBpbnRhZG8tMzQ0/MHgxNDQwLTkyMl8x/NS5qcGc);
+  background-size: cover;
+}
+img {
+  width: 300px;
+  height: 300px;
+  border-radius: 70%;
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box div {
+  width: 100px;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+  margin: 10px;
+  background-color: #354f52;
+  width: 300px;
+  height: 50px;
+  padding: 5px 15px;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  padding: 15px 5px;
+  background-color: green;
+  border-radius: 5%;
+  margin: 5% 0;
+}
+.tooltip:hover {
+  cursor: pointer;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 600px;
+  height: 50px;
+  margin: 0px auto;
+  padding: 5px 5px;
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+  box-shadow: 2px 2px 5px #354f52;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #2f3e46, #84a98c);
+  opacity: 0.8;
+}
+
+.tooltip .tooltiptext {
+  /* ... */
+  animation: tooltip-fade-in 0.3s;
+}
+
+@keyframes tooltip-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.tooltip:hover .tooltiptext {
+  animation: tooltip-fade-out 0.3s;
+}
+@keyframes tooltip-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.tooltip .tooltiptext .arrow {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  position: absolute;
+}
